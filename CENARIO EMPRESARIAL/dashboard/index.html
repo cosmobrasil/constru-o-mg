@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Executivo - Cenário Empresarial Divinópolis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="./dashboard_data.js"></script>
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="icon">📊</span>
+                    <h1>Foresight 2026 <span>Cenário Empresarial - Construção Civil</span></h1>
+                </div>
+                <div class="location">
+                    <span>📍 Divinópolis - MG</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <!-- Stats Row -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total de Empresas</h3>
+                    <p id="stat-total-emp">0</p>
+                    <span class="label">Ativas</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Capital Social Total</h3>
+                    <p id="stat-capital-total">R$ 0</p>
+                    <span class="label">Investimento Estimado</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Bairros Analisados</h3>
+                    <p id="stat-bairros-count">0</p>
+                    <span class="label">Cobertura Local</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Perfil Predominante</h3>
+                    <p id="stat-perfil">Micro Empresa</p>
+                    <span class="label">Base de Dados</span>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- Row 1 -->
+                <div class="chart-container large">
+                    <h2>Distribuição por Canae Principal (Top 50)</h2>
+                    <div class="canvas-wrapper">
+                        <canvas id="chartCnae"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h2>Porte Empresarial</h2>
+                    <div class="canvas-wrapper">
+                        <canvas id="chartPorte"></canvas>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="chart-container large">
+                    <h2>Empresas por Bairros (Top 50)</h2>
+                    <div class="canvas-wrapper">
+                        <canvas id="chartBairros"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h2>Tempo de Abertura</h2>
+                    <div class="canvas-wrapper">
+                        <canvas id="chartTempo"></canvas>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="chart-container">
+                    <h2>Investimento (Capital Social)</h2>
+                    <div class="canvas-wrapper">
+                        <canvas id="chartCapital"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h2>Faturamento Estimado</h2>
+                    <div class="canvas-wrapper">
+                        <canvas id="chartFaturamento"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h2>Quadro de Colaboradores</h2>
+                    <div class="canvas-wrapper">
+                        <canvas id="chartColab"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h2>Faixa Etária dos Sócios</h2>
+                    <div class="canvas-wrapper">
+                        <canvas id="chartFaixaEtaria"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Foresight - Inteligência de Mercado</p>
+        </footer>
+    </div>
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>

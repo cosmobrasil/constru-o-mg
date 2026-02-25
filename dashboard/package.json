@@ -1,0 +1,13 @@
+{
+  "name": "foresight-dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard de Análise Foresight",
+  "scripts": {
+    "start": "netlify dev"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "pg": "^8.18.0"
+  }
+}

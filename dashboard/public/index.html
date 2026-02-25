@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Estratégico - Foresight 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.0.2"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Dashboard de Inteligência Foresight</h1>
+            <div class="filter-bar">
+                <label for="sectorFilter">Setor:</label>
+                <select id="sectorFilter">
+                    <option value="all">Todos os Setores</option>
+                    <!-- Options will be populated dynamically -->
+                </select>
+                <button id="refreshBtn">Atualizar Dados</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="chart-section">
+                <h2>Matriz de Priorização Estratégica</h2>
+                <div class="chart-wrapper">
+                    <canvas id="foresightChart"></canvas>
+                </div>
+                <div class="chart-legend">
+                    <div class="quadrant q1">Prioridade Imediata (Alto Impacto/Baixa Incerteza)</div>
+                    <div class="quadrant q2">Apostas Estratégicas (Alto Impacto/Alta Incerteza)</div>
+                    <div class="quadrant q3">Sinais Fracos (Baixo Impacto/Alta Incerteza)</div>
+                    <div class="quadrant q4">Irrelevante (Baixo Impacto/Baixa Incerteza)</div>
+                </div>
+            </div>
+
+            <div class="ai-analysis-section" style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <h2 style="margin: 0; color: #2c3e50;">Insights Estratégicos (IA)</h2>
+                    <button id="generateAnalysisBtn" style="background: #6c5ce7; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Gerar Análise com IA</button>
+                </div>
+                <div id="aiAnalysisContent" style="white-space: pre-line; line-height: 1.6; color: #34495e;">
+                    Clique no botão acima para gerar uma análise interpretativa dos dados visíveis no gráfico.
+                </div>
+            </div>
+
+            <div class="data-section">
+                <h2>Análise Estratégica</h2>
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Setor</th>
+                            <th>ID</th>
+                            <th>Solução Tecnológica (Fator)</th>
+                            <th>Média Relevância</th>
+                            <th>Média Incerteza</th>
+                            <th>Total Votos</th>
+                            <th>Prioridade</th> <!-- Calculated Index -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Local Netlify folder
+.netlify
+node_modules/
+.DS_Store
+*.xlsx
+~$*.xlsx
+.env
+**/.env
+node_modules

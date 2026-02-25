@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #004d40;
+    --secondary-color: #00796b;
+    --accent-color: #ffca28;
+    --q1-color: #4CAF50; /* Prioridade Imediata */
+    --q2-color: #FFC107; /* Apostas Estratégicas */
+    --q3-color: #FF5722; /* Sinais Fracos */
+    --q4-color: #9E9E9E; /* Irrelevante */
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+select {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+.chart-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.chart-wrapper {
+    height: 600px;
+    position: relative;
+    width: 100%;
+}
+
+.chart-legend {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.quadrant {
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.q1 { background-color: var(--q1-color); }
+.q2 { background-color: var(--q2-color); color: #000; }
+.q3 { background-color: var(--q3-color); }
+.q4 { background-color: var(--q4-color); }
+
+.data-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f9f9f9;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.priority-high { color: var(--q1-color); font-weight: bold; }
+.priority-medium { color: var(--q2-color); font-weight: bold; }
+.priority-low { color: var(--q3-color); }
