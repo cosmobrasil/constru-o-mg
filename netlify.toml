@@ -1,0 +1,5 @@
+[build]
+  base = "CENARIO EMPRESARIAL/dashboard"
+  publish = "."
+
+# Isso diz ao Netlify para considerar a pasta do dashboard como a raiz do site.
